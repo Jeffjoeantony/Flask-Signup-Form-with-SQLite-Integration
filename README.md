@@ -76,16 +76,6 @@ Then go to `http://127.0.0.1:5000/` in your browser.
 
 ---
 
-## 🖼️ Screenshots
-
-### 💡 Signup Form
-![Signup](static/success.png)
-
-### ✅ Success Page
-_After successful registration, user is redirected here._
-
----
-
 ## ✍️ Author
 
 **Jeff Joe Antony**  
