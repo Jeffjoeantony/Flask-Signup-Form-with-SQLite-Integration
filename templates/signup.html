@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        background-image: url("/static/blurred-abstract-background.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        background-color: rgba(255, 255, 255, 0.95);
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        width: 100%;
+        max-width: 350px;
+        font-family: Arial, sans-serif;
+
+      }
+
+      .contain1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .contain1 h1 {
+        margin-bottom: 5px;
+      }
+
+      .contain1 p {
+        margin-top: 0;
+        font-size: 14px;
+        color: #555;
+      }
+
+      input,
+      button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        border: none;
+      }
+
+      input {
+        max-width: 330px;
+      }
+
+      button {
+        padding: 15px; 
+        font-size: 15px; 
+        width: 100%; 
+        background-color: #007bff;
+        color: white;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="contain1">
+        <h1>Sign Up</h1>
+        <p>Sign up to continue</p>
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+          <p style="color:red;">{{ messages[0] }}</p>
+        {% endif %}
+        {% endwith %}
+      </div>
+        <form method="POST">
+            <input type="text" name="username" id="username" placeholder="Username"  />
+            <input type="email" name="email" id="email" placeholder="Email"  />
+            <input type="tel" name="phone" id="phone" placeholder="Phone Number"  />
+            <input type="password" name="pass" id="password" placeholder="Password"  />
+            <input type="password" name="cpass" id="cpassword" placeholder="Confirm Password"  />
+            <button type="submit" id="submit">Register</button>
+        </form>
+    </div>
+  </body>
+</html>
